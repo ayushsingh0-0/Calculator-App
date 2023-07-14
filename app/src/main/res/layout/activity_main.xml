@@ -9,24 +9,47 @@
     android:id="@+id/RL"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtInput"
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/txtResult"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:padding="7dp"
-        android:textAlignment="textEnd"
-        android:textSize="32sp" />
+        android:layout_above="@id/hsv"
+        android:layout_marginBottom="14dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:clipChildren="false">
+
+            <TextView
+                android:id="@+id/txtInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:padding="7dp"
+                android:textAlignment="textEnd"
+                android:textSize="32sp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linearL"
+        android:id="@+id/hsv"
+        android:layout_marginBottom="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:clipChildren="false">
     <TextView
         android:id="@+id/txtResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/linearL"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
@@ -36,6 +59,8 @@
         android:text="0"
         android:textAlignment="textEnd"
         android:textSize="64sp" />
+    </LinearLayout>
+    </HorizontalScrollView>
 
     <LinearLayout
         android:id="@+id/linearL"
